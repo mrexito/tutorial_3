@@ -1,4 +1,5 @@
 import Link from "next/link";
+import React from "react"
 
 export default async function PostsPage() {
 
@@ -7,7 +8,7 @@ export default async function PostsPage() {
   const posts = await response.json()
 
   if (posts.length > 0) {
-  throw new Error("Vow we have some posts...")
+    throw new Error("Vow we have some posts...")
   }
 
   return (
