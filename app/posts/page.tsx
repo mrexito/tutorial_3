@@ -11,7 +11,7 @@ export default async function PostsPage() {
 
   
   if (posts.length > 0) {
-    //throw new Error("Vow we have some posts...")
+    throw new Error("Vow we have some posts...")
     //notFound()
   }
   
