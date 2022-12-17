@@ -1,7 +1,9 @@
 //https://www.youtube.com/watch?v=gMB8Uk8iOXI
 
 async function getPostById(id) {
-  const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
+  const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
+    next: { revalidate: 10 }
+  })
   const post = await response.json()
   return post
   
